@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="中车六轴机械臂.SLDASM">
+  
+<!-- Fix to world just for testing 
+  <link name="world"/>
+  <joint name="world_crrc_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+-->
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.012598 0.0011047 0.1065"
+        rpy="0 0 0" />
+      <mass
+        value="15.915" />
+      <inertia
+        ixx="0.065329"
+        ixy="-0.00016668"
+        ixz="0.0036709"
+        iyy="0.063821"
+        iyz="-0.00014937"
+        izz="0.083871" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/base_link.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.65098 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/base_link.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <link
+    name="Link_1-2">
+    <inertial>
+      <origin
+        xyz="0.012854 -0.017163 0.28919"
+        rpy="0 0 0" />
+      <mass
+        value="5.2063" />
+      <inertia
+        ixx="0.020638"
+        ixy="0.00026386"
+        ixz="-0.001535"
+        iyy="0.03315"
+        iyz="0.0015223"
+        izz="0.018759" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_1-2.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_1-2.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1-2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141592653589793"
+      upper="3.141592653589793"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link_2-3">
+    <inertial>
+      <origin
+        xyz="-0.0089431 -0.11181 -0.0083275"
+        rpy="0 0 0" />
+      <mass
+        value="11.734" />
+      <inertia
+        ixx="0.095648"
+        ixy="-0.0027846"
+        ixz="-8.9296E-05"
+        iyy="0.022518"
+        iyz="-0.0054539"
+        izz="0.1033" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_2-3.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_2-3.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.02999 0 0.38544"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Link_1-2" />
+    <child
+      link="Link_2-3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.047197551196598"
+      upper="1.570796326794897"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link_3-4">
+    <inertial>
+      <origin
+        xyz="-0.0028933 -0.033753 0.00016322"
+        rpy="0 0 0" />
+      <mass
+        value="3.5954" />
+      <inertia
+        ixx="0.0092424"
+        ixy="0.001068"
+        ixz="8.9677E-05"
+        iyy="0.0082264"
+        iyz="-0.00053743"
+        izz="0.010366" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_3-4.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.65098 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_3-4.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.0038309 -0.33998 0"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="Link_2-3" />
+    <child
+      link="Link_3-4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.785398163397448"
+      upper="1.570796326794897"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link_4-5">
+    <inertial>
+      <origin
+        xyz="-0.0010259 4.4951E-05 0.10672"
+        rpy="0 0 0" />
+      <mass
+        value="3.2762" />
+      <inertia
+        ixx="0.013868"
+        ixy="-9.0503E-05"
+        ixz="9.5133E-06"
+        iyy="0.015503"
+        iyz="-0.0013991"
+        izz="0.005855" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_4-5.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.65098 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_4-5.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.034856 -0.131 0.0057575"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link_3-4" />
+    <child
+      link="Link_4-5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617993877991494"
+      upper="2.617993877991494"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link_5-6">
+    <inertial>
+      <origin
+        xyz="-0.05386 -4.25E-05 -0.0021948"
+        rpy="0 0 0" />
+      <mass
+        value="1.5565" />
+      <inertia
+        ixx="0.001473"
+        ixy="-1.21E-07"
+        ixz="-1.8118E-05"
+        iyy="0.0034183"
+        iyz="1.1046E-07"
+        izz="0.0037163" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_5-6.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.65098 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_5-6.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="-0.00015974 -0.0057575 0.19546"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Link_4-5" />
+    <child
+      link="Link_5-6" />
+    <axis
+      xyz="-0.0073144 0.0008972 0.99997" />
+    <limit
+      lower="-0.209439510239320"
+      upper="3.281218993749340"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link_6-tool">
+    <inertial>
+      <origin
+        xyz="3.7209E-05 -5.0217E-10 -0.16989"
+        rpy="0 0 0" />
+      <mass
+        value="0.062381" />
+      <inertia
+        ixx="1.2542E-05"
+        ixy="-1.5924E-13"
+        ixz="4.3057E-14"
+        iyy="1.2542E-05"
+        iyz="-1.199E-13"
+        izz="2.3745E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_6-tool.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_6-tool.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="Link_5-6" />
+    <child
+      link="Link_6-tool" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-6.283185307179586"
+      upper="6.283185307179586"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link_tool">
+    <inertial>
+      <origin
+        xyz="-0.30194 -0.01227 -0.18183"
+        rpy="0 0 0" />
+      <mass
+        value="49.231" />
+      <inertia
+        ixx="3.4503"
+        ixy="-0.0049853"
+        ixz="-0.81227"
+        iyy="3.8972"
+        iyz="0.06881"
+        izz="0.77776" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_tool.STL" />
+      </geometry> -->
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- <geometry>
+        <mesh
+          filename="C:/Users/hengz/Documents/TJU/study/3/CRRC/CRRC6_URDF/中车六轴机械臂-20220111.SLDASM/meshes/Link_tool.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="joint_tool"
+    type="fixed">
+    <origin
+      xyz="3.7209E-05 0 -0.17564"
+      rpy="0 0 0" />
+    <parent
+      link="Link_6-tool" />
+    <child
+      link="Link_tool" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
